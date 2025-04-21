@@ -16,9 +16,11 @@ namespace Csharp2_ControlTower
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ControlTower controlTower;
         public MainWindow()
         {
             InitializeComponent();
+            controlTower = new(airplaneListBox);
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
