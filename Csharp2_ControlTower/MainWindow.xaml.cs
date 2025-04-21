@@ -20,5 +20,15 @@ namespace Csharp2_ControlTower
         {
             InitializeComponent();
         }
+
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TakeOffBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Threading;
 
 namespace Csharp2_ControlTower.Model
 {
-    class Flight
+    class AirplaneEventArgs
     {
+        private string message;
+        private string name;
 
     }
 }

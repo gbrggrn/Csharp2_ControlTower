@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Csharp2_ControlTower")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0204cfeaf25908698d2d4f46ccb595329b7dba9f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+364851d724a1d8881ce57c5e0a236cc324f99525")]
 [assembly: System.Reflection.AssemblyProductAttribute("Csharp2_ControlTower")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Csharp2_ControlTower")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
