@@ -10,16 +10,16 @@ namespace Csharp2_ControlTower
 {
     class ControlTower
     {
-        private List<Flight> flights;
+        private List<Airplane> airplanes;
         private ListBox airplaneListBox;
 
         public ControlTower(ListBox airplaneListBoxIn)
         {
-            flights = [];
+            airplanes = [];
             airplaneListBox = airplaneListBoxIn;
         }
 
-        private void AddFlight()
+        private void AddPlane()
         {
             throw new NotImplementedException();
         }
@@ -29,12 +29,12 @@ namespace Csharp2_ControlTower
             throw new NotImplementedException();
         }
 
-        private void OrderTakeOff(Flight flight)
+        private void OrderTakeOff(int index)
         {
             throw new NotImplementedException();
         }
 
-        private void OrderLanding(Flight flight)
+        private void OrderLanding(int index)
         {
             throw new NotImplementedException();
         }
