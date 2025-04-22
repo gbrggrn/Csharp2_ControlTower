@@ -1,6 +1,7 @@
 ﻿using Csharp2_ControlTower.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,18 +11,22 @@ namespace Csharp2_ControlTower
 {
     class ControlTower
     {
-        private List<Airplane> airplanes;
-        private ListBox airplaneListBox;
+        public ObservableCollection<Airplane> Airplanes { get; private set; }
 
-        public ControlTower(ListBox airplaneListBoxIn)
+        public ControlTower()
         {
-            airplanes = [];
-            airplaneListBox = airplaneListBoxIn;
+            Airplanes = [];
         }
 
-        private void AddPlane()
+        internal void AddPlane(AirplaneDTO airplaneDTO)
         {
-            throw new NotImplementedException();
+            Airplane airplane = new Airplane();
+            airplane.Name = airplaneDTO.Name;
+            airplane.Destination = airplaneDTO.Destination;
+            airplane.FlightID = airplaneDTO.FlightId;
+            airplane.FlightTime = airplaneDTO.FlightTime;
+
+            Airplanes.Add(airplane);
         }
 
         private void OnDisplayInfo(object sender, AirplaneEventArgs e)

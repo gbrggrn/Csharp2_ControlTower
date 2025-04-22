@@ -15,7 +15,6 @@ namespace Csharp2_ControlTower.Model
         public double FlightTime { get; set; }
         public TimeOnly LocalTime { get; set; }
         public string Name { get; set; } = string.Empty;
-        public int FlightDuration { get; set; }
 
         //Timer
         private DispatcherTimer? dispatcherTimer;
@@ -26,9 +25,9 @@ namespace Csharp2_ControlTower.Model
 
         internal void DispatcherTimer_Tick(object sender, EventArgs e)
         {
-            FlightDuration--;
+            FlightTime--;
 
-            if (FlightDuration <= 0)
+            if (FlightTime <= 0)
             {
                 OnLanding();
             }
@@ -38,11 +37,11 @@ namespace Csharp2_ControlTower.Model
         {
             LocalTime = TimeOnly.FromDateTime(DateTime.Now);
             Landed?.Invoke(this, new AirplaneEventArgs(Name, $" has landed in {Destination}, {LocalTime}!"));
+            Destination = "Home";
         }
 
         internal void OnTakeOff()
         {
-            FlightDuration = new Random().Next(5, 16);
             SetupTimer();
 
             LocalTime = TimeOnly.FromDateTime(DateTime.Now);
@@ -58,11 +57,6 @@ namespace Csharp2_ControlTower.Model
         }
 
         internal void StopTimer()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
         {
             throw new NotImplementedException();
         }

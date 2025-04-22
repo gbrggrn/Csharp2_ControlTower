@@ -29,21 +29,28 @@
                 <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Label x:Name="nameLbl" Content="Name"/>
                     <Label x:Name="flightIDlbl" Content="Flight ID"/>
-                    <Label x:Name="descriptionLbl" Content="Description"/>
+                    <Label x:Name="destinationLbl" Content="Destination"/>
                     <Label x:Name="flightTimeLbl" Content="Flight Time"/>
                 </StackPanel>
 
                 <!-- Airplane specifics display-->
                 <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBox x:Name="nameTxtBox" IsReadOnly="True" MinWidth="100" MaxWidth="100" Margin="5"/>
-                    <TextBox x:Name="flightIDTxtBox" IsReadOnly="True" MinWidth="100" MaxWidth="100" Margin="5"/>
-                    <TextBox x:Name="descriptionTxtBox" IsReadOnly="True" MinWidth="100" MaxWidth="100" Margin="5"/>
-                    <TextBox x:Name="flightTimeTxtBox" IsReadOnly="True" MinWidth="100" MaxWidth="100" Margin="5"/>
+                    <TextBox x:Name="nameTxtBox" MinWidth="100" MaxWidth="100" Margin="5"/>
+                    <TextBox x:Name="flightIDTxtBox" MinWidth="100" MaxWidth="100" Margin="5"/>
+                    <TextBox x:Name="destinationTxtBox" MinWidth="100" MaxWidth="100" Margin="5"/>
+                    <TextBox x:Name="flightTimeTxtBox" MinWidth="100" MaxWidth="100" Margin="5"/>
                 </StackPanel>
             </Grid>
 
             <!-- Airplanes display -->
-            <ListBox x:Name="airplaneListBox" Grid.Row="0" Grid.Column="1" Margin="10"/>
+            <ListView x:Name="airplaneListView" Grid.Row="0" Grid.Column="1" Margin="10">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="111"/>
+                        <GridViewColumn Header="Destination" DisplayMemberBinding="{Binding Destination}" Width="111"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
         </Grid>
 
         <Grid Grid.Row="1">
