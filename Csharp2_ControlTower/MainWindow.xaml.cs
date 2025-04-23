@@ -28,6 +28,7 @@ namespace Csharp2_ControlTower
             SetupInputValues();
             this.DataContext = controlTower;
             airplaneListView.ItemsSource = controlTower.Airplanes;
+            flightDisplayLstView.ItemsSource = controlTower.InFlightMessaging;
         }
 
         internal void SetupInputValues()
@@ -110,9 +111,11 @@ namespace Csharp2_ControlTower
 
         private void TakeOffBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if (airplaneListView.SelectedIndex != -1)
+            {
+                int index = airplaneListView.SelectedIndex;
+                controlTower.OrderTakeOff(index);
+            }
         }
-
-
     }
 }

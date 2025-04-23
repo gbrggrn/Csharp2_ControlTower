@@ -66,6 +66,14 @@
             <Button x:Name="takeOffBtn" Grid.Column="1" Content="Take Off" Margin="10" Click="TakeOffBtn_Click"/>
         </Grid>
 
-        <ListView x:Name="flightDisplayLstView" Grid.Row="2" Margin="10"/>
+        <!-- Flight status display -->
+        <ListView x:Name="flightDisplayLstView" Grid.Row="2" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding Message}" Width="320"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

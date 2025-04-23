@@ -12,10 +12,12 @@ namespace Csharp2_ControlTower
     class ControlTower
     {
         public ObservableCollection<Airplane> Airplanes { get; private set; }
+        public ObservableCollection<FlightMessages> InFlightMessaging { get; private set; }
 
         public ControlTower()
         {
             Airplanes = [];
+            InFlightMessaging = [];
         }
 
         internal void AddPlane(AirplaneDTO airplaneDTO)
@@ -31,17 +33,29 @@ namespace Csharp2_ControlTower
 
         private void OnDisplayInfo(object sender, AirplaneEventArgs e)
         {
-            throw new NotImplementedException();
+            FlightMessages flightEvent = new()
+            {
+                Name = e.Name,
+                Message = e.Message,
+            };
+
+            InFlightMessaging.Add(flightEvent);
         }
 
-        private void OrderTakeOff(int index)
+        internal void OrderTakeOff(int index)
         {
-            throw new NotImplementedException();
+            Airplanes[index].TookOff += OnDisplayInfo!;
+            Airplanes[index].Landed += OnDisplayInfo!;
+
+            Airplanes[index].OnTakeOff();
         }
 
-        private void OrderLanding(int index)
+        internal void OrderLanding(int index)
         {
-            throw new NotImplementedException();
+            Airplanes[index].OnLanding();
+
+            Airplanes[index].TookOff -= OnDisplayInfo!;
+            Airplanes[index].Landed -= OnDisplayInfo!;
         }
     }
 }

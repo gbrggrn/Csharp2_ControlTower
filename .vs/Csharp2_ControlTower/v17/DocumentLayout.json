@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|c:\\users\\gusta\\source\\repos\\c#\\mau_c#\\c#2\\csharp2_controltower\\csharp2_controltower\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|solutionrelative:csharp2_controltower\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|c:\\users\\gusta\\source\\repos\\c#\\mau_c#\\c#2\\csharp2_controltower\\csharp2_controltower\\model\\airplane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|solutionrelative:csharp2_controltower\\model\\airplane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,12 +11,20 @@
       "RelativeMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|solutionrelative:csharp2_controltower\\control\\controltower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|c:\\users\\gusta\\source\\repos\\c#\\mau_c#\\c#2\\csharp2_controltower\\csharp2_controltower\\model\\airplanedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|solutionrelative:csharp2_controltower\\model\\airplanedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|c:\\users\\gusta\\source\\repos\\c#\\mau_c#\\c#2\\csharp2_controltower\\csharp2_controltower\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|solutionrelative:csharp2_controltower\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|c:\\users\\gusta\\source\\repos\\c#\\mau_c#\\c#2\\csharp2_controltower\\csharp2_controltower\\model\\flightmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|solutionrelative:csharp2_controltower\\model\\flightmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|c:\\users\\gusta\\source\\repos\\c#\\mau_c#\\c#2\\csharp2_controltower\\csharp2_controltower\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|solutionrelative:csharp2_controltower\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|c:\\users\\gusta\\source\\repos\\c#\\mau_c#\\c#2\\csharp2_controltower\\csharp2_controltower\\model\\airplanedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|solutionrelative:csharp2_controltower\\model\\airplanedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A429910-4919-4011-A42C-8697B98F3E2A}|Csharp2_ControlTower\\Csharp2_ControlTower.csproj|c:\\users\\gusta\\source\\repos\\c#\\mau_c#\\c#2\\csharp2_controltower\\csharp2_controltower\\model\\airplaneeventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AirplaneDTO.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\Model\\AirplaneDTO.cs",
               "RelativeDocumentMoniker": "Csharp2_ControlTower\\Model\\AirplaneDTO.cs",
@@ -50,8 +54,7 @@
               "RelativeToolTip": "Csharp2_ControlTower\\Model\\AirplaneDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T12:50:04.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T12:50:04.362Z"
             },
             {
               "$type": "Document",
@@ -67,13 +70,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Csharp2_ControlTower\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\MainWindow.xaml.cs",
               "RelativeToolTip": "Csharp2_ControlTower\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAGIAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowHYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T07:29:41.002Z",
               "EditorCaption": ""
@@ -81,32 +84,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Airplane.cs",
-              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\Model\\Airplane.cs",
-              "RelativeDocumentMoniker": "Csharp2_ControlTower\\Model\\Airplane.cs",
-              "ToolTip": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\Model\\Airplane.cs",
-              "RelativeToolTip": "Csharp2_ControlTower\\Model\\Airplane.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T06:51:42.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "ControlTower.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\Control\\ControlTower.cs",
               "RelativeDocumentMoniker": "Csharp2_ControlTower\\Control\\ControlTower.cs",
               "ToolTip": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\Control\\ControlTower.cs",
               "RelativeToolTip": "Csharp2_ControlTower\\Control\\ControlTower.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T06:51:20.815Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "Airplane.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\Model\\Airplane.cs",
+              "RelativeDocumentMoniker": "Csharp2_ControlTower\\Model\\Airplane.cs",
+              "ToolTip": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\Model\\Airplane.cs",
+              "RelativeToolTip": "Csharp2_ControlTower\\Model\\Airplane.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T06:51:42.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FlightMessages.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\Model\\FlightMessages.cs",
+              "RelativeDocumentMoniker": "Csharp2_ControlTower\\Model\\FlightMessages.cs",
+              "ToolTip": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\Model\\FlightMessages.cs",
+              "RelativeToolTip": "Csharp2_ControlTower\\Model\\FlightMessages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T07:08:37.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AirplaneEventArgs.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\Model\\AirplaneEventArgs.cs",
               "RelativeDocumentMoniker": "Csharp2_ControlTower\\Model\\AirplaneEventArgs.cs",
@@ -114,12 +130,11 @@
               "RelativeToolTip": "Csharp2_ControlTower\\Model\\AirplaneEventArgs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T07:54:25.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T07:54:25.87Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Flight.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\Model\\Flight.cs",
               "RelativeDocumentMoniker": "Csharp2_ControlTower\\Model\\Flight.cs",
@@ -127,8 +142,7 @@
               "RelativeToolTip": "Csharp2_ControlTower\\Model\\Flight.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T06:51:53.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T06:51:53.1Z"
             }
           ]
         }

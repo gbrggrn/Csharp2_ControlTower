@@ -36,7 +36,9 @@ namespace Csharp2_ControlTower.Model
         internal void OnLanding()
         {
             LocalTime = TimeOnly.FromDateTime(DateTime.Now);
-            Landed?.Invoke(this, new AirplaneEventArgs(Name, $" has landed in {Destination}, {LocalTime}!"));
+            string timeWithSeconds = LocalTime.ToString("HH:mm:ss");
+            Landed?.Invoke(this, new AirplaneEventArgs(Name, $" has landed in {Destination}, {timeWithSeconds}!"));
+            StopTimer();
             Destination = "Home";
         }
 
@@ -45,7 +47,8 @@ namespace Csharp2_ControlTower.Model
             SetupTimer();
 
             LocalTime = TimeOnly.FromDateTime(DateTime.Now);
-            TookOff?.Invoke(this, new AirplaneEventArgs(Name, $" is taking off, destination {Destination}, {LocalTime}!"));
+            string timeWithSeconds = LocalTime.ToString("HH:mm:ss");
+            TookOff?.Invoke(this, new AirplaneEventArgs(Name, $" is taking off, destination {Destination}, {timeWithSeconds}!"));
         }
 
         internal void SetupTimer()
@@ -58,7 +61,7 @@ namespace Csharp2_ControlTower.Model
 
         internal void StopTimer()
         {
-            throw new NotImplementedException();
+            dispatcherTimer?.Stop();
         }
     }
 }
