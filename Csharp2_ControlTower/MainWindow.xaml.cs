@@ -117,5 +117,13 @@ namespace Csharp2_ControlTower
                 controlTower.OrderTakeOff(index);
             }
         }
+
+        private void reqAltBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (airplaneListView.SelectedIndex != -1)
+            {
+                
+            }
+        }
     }
 }

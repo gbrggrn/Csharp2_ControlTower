@@ -15,6 +15,8 @@ namespace Csharp2_ControlTower.Model
         public double FlightTime { get; set; }
         public TimeOnly LocalTime { get; set; }
         public string Name { get; set; } = string.Empty;
+        public string FlightLevel { get; set; } = "FL000";
+        public double FlightTimeElapsed { get; set; }
 
         //Timer
         private DispatcherTimer? dispatcherTimer;
@@ -22,24 +24,61 @@ namespace Csharp2_ControlTower.Model
         //Events
         public event EventHandler<AirplaneEventArgs>? TookOff;
         public event EventHandler<AirplaneEventArgs>? Landed;
+        public event EventHandler<AirplaneEventArgs>? FlightLevelChanged;
 
         internal void DispatcherTimer_Tick(object sender, EventArgs e)
         {
-            FlightTime--;
+            CanLand = true;
+            FlightTimeElapsed++;
+            UpdateFlightLevel();
 
-            if (FlightTime <= 0)
+            if (FlightTimeElapsed == FlightTime)
             {
                 OnLanding();
             }
         }
 
+        internal void ManualUpdateFlightLevel(string flightLevelIn)
+        {
+            FlightLevel = flightLevelIn;
+            FlightLevelChanged?.Invoke(this, new AirplaneEventArgs(Name, "manual flight level change", FlightLevel));
+        }
+
+        internal void UpdateFlightLevel()
+        {
+            double flightTimeRemaining = FlightTime - FlightTimeElapsed;
+            string newLevel;
+
+            if (flightTimeRemaining < FlightTime * 0.3)
+            {
+                newLevel = "FL090";
+            }
+            else if (flightTimeRemaining < FlightTime * 0.8)
+            {
+                newLevel = "FL330";
+            }
+            else
+            {
+                newLevel = "FL070";
+            }
+
+            if (FlightLevel != newLevel)
+            {
+                FlightLevel = newLevel;
+                FlightLevelChanged?.Invoke(this, new AirplaneEventArgs(Name, "flight level changed", FlightLevel));
+            }
+        }
+
         internal void OnLanding()
         {
+            FlightLevel = "FL000";
             LocalTime = TimeOnly.FromDateTime(DateTime.Now);
             string timeWithSeconds = LocalTime.ToString("HH:mm:ss");
-            Landed?.Invoke(this, new AirplaneEventArgs(Name, $" has landed in {Destination}, {timeWithSeconds}!"));
+            Landed?.Invoke(this, new AirplaneEventArgs(Name, $" has landed in {Destination}, {timeWithSeconds}!", FlightLevel));
             StopTimer();
+            CanLand = false;
             Destination = "Home";
+            FlightTimeElapsed = 0;
         }
 
         internal void OnTakeOff()
@@ -48,7 +87,7 @@ namespace Csharp2_ControlTower.Model
 
             LocalTime = TimeOnly.FromDateTime(DateTime.Now);
             string timeWithSeconds = LocalTime.ToString("HH:mm:ss");
-            TookOff?.Invoke(this, new AirplaneEventArgs(Name, $" is taking off, destination {Destination}, {timeWithSeconds}!"));
+            TookOff?.Invoke(this, new AirplaneEventArgs(Name, $" is taking off, destination {Destination}, {timeWithSeconds}!", FlightLevel));
         }
 
         internal void SetupTimer()

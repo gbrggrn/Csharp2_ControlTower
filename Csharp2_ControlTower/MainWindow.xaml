@@ -57,6 +57,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <!-- Add button -->
@@ -64,6 +65,9 @@
 
             <!-- Take off button -->
             <Button x:Name="takeOffBtn" Grid.Column="1" Content="Take Off" Margin="10" Click="TakeOffBtn_Click"/>
+            
+            <!-- Request altitude change button -->
+            <Button x:Name="reqAltBtn" Grid.Column="2" Content="Request alt. change" Margin="10" Click="reqAltBtn_Click"/>
         </Grid>
 
         <!-- Flight status display -->
@@ -71,7 +75,8 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
-                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding Message}" Width="320"/>
+                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding Message}" Width="250"/>
+                    <GridViewColumn Header="Altitude" DisplayMemberBinding="{Binding FlightLevel}" Width="60"/>
                 </GridView>
             </ListView.View>
         </ListView>

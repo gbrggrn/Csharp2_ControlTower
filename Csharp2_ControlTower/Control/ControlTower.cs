@@ -37,6 +37,7 @@ namespace Csharp2_ControlTower
             {
                 Name = e.Name,
                 Message = e.Message,
+                FlightLevel = e.FlightLevel
             };
 
             InFlightMessaging.Add(flightEvent);
@@ -46,6 +47,7 @@ namespace Csharp2_ControlTower
         {
             Airplanes[index].TookOff += OnDisplayInfo!;
             Airplanes[index].Landed += OnDisplayInfo!;
+            Airplanes[index].FlightLevelChanged += OnDisplayInfo!;
 
             Airplanes[index].OnTakeOff();
         }
@@ -56,6 +58,12 @@ namespace Csharp2_ControlTower
 
             Airplanes[index].TookOff -= OnDisplayInfo!;
             Airplanes[index].Landed -= OnDisplayInfo!;
+            Airplanes[index].FlightLevelChanged -= OnDisplayInfo!;
+        }
+
+        internal void OrderFlightLevelChange(int index, string flightLevelIn)
+        {
+            Airplanes[index].ManualUpdateFlightLevel(flightLevelIn);
         }
     }
 }

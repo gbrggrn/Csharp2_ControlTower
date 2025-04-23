@@ -10,5 +10,6 @@ namespace Csharp2_ControlTower.Model
     {
         public string Message { get; set; }
         public string Name { get; set; }
+        public string FlightLevel { get; set; }
     }
 }

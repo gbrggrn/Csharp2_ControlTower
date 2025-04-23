@@ -10,15 +10,18 @@ namespace Csharp2_ControlTower.Model
     {
         private string message;
         private string name;
+        private string flightLevel;
 
         //Properties
         public string Message => message;
         public string Name => name;
+        public string FlightLevel => flightLevel;
 
-        public AirplaneEventArgs(string nameIn, string messageIn)
+        public AirplaneEventArgs(string nameIn, string messageIn, string flightLevelIn)
         {
             this.message = messageIn;
             this.name = nameIn;
+            this.flightLevel = flightLevelIn;
         }
     }
 }
