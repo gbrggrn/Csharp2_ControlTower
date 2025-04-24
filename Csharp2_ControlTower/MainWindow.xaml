@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Csharp2_ControlTower"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="500">
+        Title="MainWindow" Height="600" Width="650">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="150"/>
@@ -43,11 +43,11 @@
             </Grid>
 
             <!-- Airplanes display -->
-            <ListView x:Name="airplaneListView" Grid.Row="0" Grid.Column="1" Margin="10">
+            <ListView x:Name="airplaneListView" Grid.Row="0" Grid.Column="1" Margin="10" ScrollViewer.CanContentScroll="True">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="111"/>
-                        <GridViewColumn Header="Destination" DisplayMemberBinding="{Binding Destination}" Width="111"/>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="130"/>
+                        <GridViewColumn Header="Destination" DisplayMemberBinding="{Binding Destination}" Width="165"/>
                     </GridView>
                 </ListView.View>
             </ListView>
@@ -67,15 +67,15 @@
             <Button x:Name="takeOffBtn" Grid.Column="1" Content="Take Off" Margin="10" Click="TakeOffBtn_Click"/>
             
             <!-- Request altitude change button -->
-            <Button x:Name="reqAltBtn" Grid.Column="2" Content="Request alt. change" Margin="10" Click="reqAltBtn_Click"/>
+            <Button x:Name="reqAltBtn" Grid.Column="2" Content="Request alt. change" Margin="10" Click="ReqAltBtn_Click"/>
         </Grid>
 
         <!-- Flight status display -->
-        <ListView x:Name="flightDisplayLstView" Grid.Row="2" Margin="10">
+        <ListView x:Name="flightDisplayLstView" Grid.Row="2" Margin="10" ScrollViewer.CanContentScroll="True">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
-                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding Message}" Width="250"/>
+                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding Message}" Width="400"/>
                     <GridViewColumn Header="Altitude" DisplayMemberBinding="{Binding FlightLevel}" Width="60"/>
                 </GridView>
             </ListView.View>

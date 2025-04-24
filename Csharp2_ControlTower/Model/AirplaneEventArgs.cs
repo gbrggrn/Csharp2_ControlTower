@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace Csharp2_ControlTower.Model
 {
-    class AirplaneEventArgs : EventArgs
+    /// <summary>
+    /// Represents event data for en airplane event.
+    /// </summary>
+    public class AirplaneEventArgs : EventArgs
     {
-        private string message;
-        private string name;
-        private string flightLevel;
-
         //Properties
-        public string Message => message;
-        public string Name => name;
-        public string FlightLevel => flightLevel;
+        public string Message { get; }
+        public string Name { get; }
+        public string FlightLevel { get; }
 
+        //Constructor initializes properties.
         public AirplaneEventArgs(string nameIn, string messageIn, string flightLevelIn)
         {
-            this.message = messageIn;
-            this.name = nameIn;
-            this.flightLevel = flightLevelIn;
+            Message = messageIn;
+            Name = nameIn;
+            FlightLevel = flightLevelIn;
         }
     }
 }

@@ -18,8 +18,13 @@ namespace Csharp2_ControlTower
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ControlTower controlTower;
+        private readonly ControlTower controlTower;
         private Dictionary<Func<string>, string>? inputValues;
+
+        //Limits
+        private const int maxFlightTime = 50;
+        private const int minFlightTime = 5;
+        private const int maxChars = 20;
 
         public MainWindow()
         {
@@ -29,6 +34,7 @@ namespace Csharp2_ControlTower
             this.DataContext = controlTower;
             airplaneListView.ItemsSource = controlTower.Airplanes;
             flightDisplayLstView.ItemsSource = controlTower.InFlightMessaging;
+            controlTower.AddTestValues();
         }
 
         internal void SetupInputValues()
@@ -56,17 +62,17 @@ namespace Csharp2_ControlTower
                 {
                     errorMessages.Add($"{label} can not be empty");
                 }
-                else if (value.Length > 20)
+                else if (value.Length > maxChars)
                 {
-                    errorMessages.Add($"{label} can not be longer than 20 characters");
+                    errorMessages.Add($"{label} can not be longer than {maxChars} characters");
                 }
                 else if (label == "Flight time")
                 {
                     if (int.TryParse(value, out int result))
                     {
-                        if (result < 5 || result > 15)
+                        if (result < minFlightTime || result > maxFlightTime)
                         {
-                            errorMessages.Add($"{label} has to be an integer between 5-15");
+                            errorMessages.Add($"{label} has to be an integer between {minFlightTime} and {maxFlightTime}");
                         }
                         else
                         {
@@ -116,14 +122,35 @@ namespace Csharp2_ControlTower
                 int index = airplaneListView.SelectedIndex;
                 controlTower.OrderTakeOff(index);
             }
+            else
+            {
+                MessageBoxes.DisplayErrorBox("No airplane selected!");
+            }
         }
 
-        private void reqAltBtn_Click(object sender, RoutedEventArgs e)
+        private void ReqAltBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (airplaneListView.SelectedIndex != -1)
+            bool anyCruisingFlights = false;
+
+            foreach (Airplane airplane in controlTower.Airplanes)
             {
-                
+                if (airplane.FlightLevel == "FL330")
+                {
+                    anyCruisingFlights = true;
+                }
             }
+
+            if (!anyCruisingFlights)
+            {
+                MessageBoxes.DisplayErrorBox("No airplanes at cruising altitude!");
+                return;
+            }
+
+            FlightLevelWindow flightLevelWindow = new(controlTower);
+
+            controlTower.PauseAllTimers();
+            flightLevelWindow.ShowDialog();
+            controlTower.ResumeAllTimers();
         }
     }
 }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Csharp2_ControlTower.Model
 {
+    /// <summary>
+    /// DTO template for airplane registration.
+    /// </summary>
     class AirplaneDTO
     {
         public required string Name { get; set; }

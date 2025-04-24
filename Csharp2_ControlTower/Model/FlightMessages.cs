@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Csharp2_ControlTower.Model
 {
-    class FlightMessages
+    /// <summary>
+    /// Data template for flightmessages.
+    /// </summary>
+    public class FlightMessages
     {
         public string Message { get; set; }
         public string Name { get; set; }

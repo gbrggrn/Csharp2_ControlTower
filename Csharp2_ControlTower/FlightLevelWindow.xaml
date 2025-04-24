@@ -14,11 +14,12 @@
         </Grid.RowDefinitions>
         
         <!-- Flight level display -->
-        <ListView x:Name="activeFlightsListView" Margin="10">
+        <ListView x:Name="activeFlightsListView" Margin="10" ScrollViewer.CanContentScroll="True">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Name" Width="160"/>
-                    <GridViewColumn Header="Flight level" Width="160"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="120"/>
+                    <GridViewColumn Header="Active flight" DisplayMemberBinding="{Binding CanLand}" Width="100"/>
+                    <GridViewColumn Header="Flight level" DisplayMemberBinding="{Binding FlightLevel}" Width="100"/>
                 </GridView>
             </ListView.View>
         </ListView>
