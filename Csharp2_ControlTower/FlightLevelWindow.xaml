@@ -1,0 +1,49 @@
+﻿<Window x:Class="Csharp2_ControlTower.FlightLevelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Csharp2_ControlTower"
+        mc:Ignorable="d"
+        Title="FlightLevelWindow" Height="400" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Flight level display -->
+        <ListView x:Name="activeFlightsListView" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="160"/>
+                    <GridViewColumn Header="Flight level" Width="160"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+        <!-- Input control -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="flInputLbl" Content="New flight level" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+            <TextBox x:Name="newFlTxtBox" Grid.Column="1" Margin="10"/>
+        </Grid>
+        
+        <!-- Buttons -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="cancelBtn" Content="Cancel" Margin="10" Click="CancelBtn_Click"/>
+            <Button x:Name="newFlBtn" Content="Assign new flightlevel" Grid.Column="1" Margin="10" Click="NewFlBtn_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>
