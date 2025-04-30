@@ -19,6 +19,8 @@ namespace Csharp2_ControlTower
     public partial class MainWindow : Window
     {
         private readonly ControlTower controlTower;
+
+        //Dictionary of textbox text-getters and input descriptions
         private Dictionary<Func<string>, string>? inputValues;
 
         //Limits
@@ -154,7 +156,16 @@ namespace Csharp2_ControlTower
             if (airplaneListView.SelectedIndex != -1)
             {
                 int index = airplaneListView.SelectedIndex;
-                controlTower.OrderTakeOff(index);
+
+                //Check if already in flight
+                if (!controlTower.Airplanes[index].CanLand)
+                {
+                    controlTower.OrderTakeOff(index);
+                }
+                else
+                {
+                    MessageBoxes.DisplayErrorBox("Airplane is in flight, it can take off again after landing");
+                }
             }
             else
             {

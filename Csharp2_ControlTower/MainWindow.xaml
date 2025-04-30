@@ -25,7 +25,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <!-- Specifics display labels -->
+                <!-- Input control labels -->
                 <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Label x:Name="nameLbl" Content="Name"/>
                     <Label x:Name="flightIDlbl" Content="Flight ID"/>
@@ -33,7 +33,7 @@
                     <Label x:Name="flightTimeLbl" Content="Flight Time"/>
                 </StackPanel>
 
-                <!-- Airplane specifics display-->
+                <!-- Input controls -->
                 <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBox x:Name="nameTxtBox" MinWidth="100" MaxWidth="100" Margin="5"/>
                     <TextBox x:Name="flightIDTxtBox" MinWidth="100" MaxWidth="100" Margin="5"/>
