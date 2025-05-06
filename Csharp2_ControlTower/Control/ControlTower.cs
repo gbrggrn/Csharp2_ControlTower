@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Xaml;
 
 namespace Csharp2_ControlTower
 {
@@ -76,6 +77,7 @@ namespace Csharp2_ControlTower
             {
                 Name = airplaneDTO.Name,
                 Destination = airplaneDTO.Destination,
+                DestinationDisplay = airplaneDTO.Destination,
                 FlightID = airplaneDTO.FlightId,
                 FlightTime = airplaneDTO.FlightTime
             };

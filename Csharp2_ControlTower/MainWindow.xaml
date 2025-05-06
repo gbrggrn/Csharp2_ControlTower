@@ -47,7 +47,7 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="130"/>
-                        <GridViewColumn Header="Destination" DisplayMemberBinding="{Binding Destination}" Width="165"/>
+                        <GridViewColumn Header="Destination" DisplayMemberBinding="{Binding DestinationDisplay}" Width="165"/>
                     </GridView>
                 </ListView.View>
             </ListView>

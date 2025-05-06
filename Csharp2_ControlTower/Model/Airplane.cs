@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,11 +8,26 @@ using System.Windows.Threading;
 
 namespace Csharp2_ControlTower.Model
 {
-    public class Airplane
+    public class Airplane : INotifyPropertyChanged
     {
         //Properties
         public bool CanLand { get; set; }
-        public string Destination { get; set; } = "Home";
+        public string Destination { get; set; } = string.Empty;
+        private readonly string DestinationHome = "Home";
+        private string destinationDisplay = string.Empty;
+        public string DestinationDisplay
+        {
+            get => destinationDisplay;
+            set
+            {
+                if (destinationDisplay != value)
+                {
+                    destinationDisplay = value;
+                    //If value of DestinationDisplay is changed, call helper to raise event of property change
+                    OnPropertyChanged(nameof(DestinationDisplay));
+                }
+            }
+        }
         public string FlightID { get; set; } = string.Empty;
         public double FlightTime { get; set; }
         public TimeOnly LocalTime { get; set; }
@@ -27,14 +43,25 @@ namespace Csharp2_ControlTower.Model
         public event EventHandler<AirplaneEventArgs>? TookOff;
         public event EventHandler<AirplaneEventArgs>? Landed;
         public event EventHandler<AirplaneEventArgs>? FlightLevelChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         //Flags
         private bool ManualFlightLevelChanged { get; set; } = false;
         private int ManualFlightLevelOvveride { get; set; } = 0;
+        private bool ReturningHome = false;
 
         //Delegates
         public delegate string ManualUpdateFlightLevelDelegate(string newLevel);
         public ManualUpdateFlightLevelDelegate? ManualUpdateFlightLevelMethod;
+
+        /// <summary>
+        /// Event helper for when property is changed.
+        /// </summary>
+        /// <param name="propertyName">The new name assigned</param>
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         /// <summary>
         /// Updates the state on each click until the airplane has landed.
@@ -145,10 +172,13 @@ namespace Csharp2_ControlTower.Model
             ManualFlightLevelChanged = false;
             LocalTime = TimeOnly.FromDateTime(DateTime.Now);
             string timeWithSeconds = LocalTime.ToString("HH:mm:ss");
-            Landed?.Invoke(this, new AirplaneEventArgs(Name, $"landed in {Destination}, {timeWithSeconds}!", FlightLevel));
+            Landed?.Invoke(this, new AirplaneEventArgs(Name, $"landed in {DestinationDisplay}, {timeWithSeconds}!", FlightLevel));
+            //Reset ReturningHome
+            ReturningHome = !ReturningHome;
+            //If ReturningHome is true: set destination home. If false: set original destination
+            DestinationDisplay = ReturningHome ? DestinationHome : Destination;
             StopTimer();
             CanLand = false;
-            Destination = "Home";
             FlightTimeElapsed = 0;
         }
 
@@ -162,7 +192,7 @@ namespace Csharp2_ControlTower.Model
 
             LocalTime = TimeOnly.FromDateTime(DateTime.Now);
             string timeWithSeconds = LocalTime.ToString("HH:mm:ss");
-            TookOff?.Invoke(this, new AirplaneEventArgs(Name, $"taking off, destination {Destination}, {timeWithSeconds}!", FlightLevel));
+            TookOff?.Invoke(this, new AirplaneEventArgs(Name, $"taking off, destination {DestinationDisplay}, {timeWithSeconds}!", FlightLevel));
         }
 
         /// <summary>
