@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "Csharp2_ControlTower\\Model\\Airplane.cs",
               "ToolTip": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\Model\\Airplane.cs",
               "RelativeToolTip": "Csharp2_ControlTower\\Model\\Airplane.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAswB0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-23T13:10:07.195Z",
               "EditorCaption": ""
@@ -70,8 +70,7 @@
               "ToolTip": "C:\\Users\\gusta\\source\\repos\\C#\\MAU_C#\\C#2\\Csharp2_ControlTower\\Csharp2_ControlTower\\MainWindow.xaml",
               "RelativeToolTip": "Csharp2_ControlTower\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-24T06:27:23.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T06:27:23.784Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "Csharp2_ControlTower\\MainWindow.xaml.cs",
               "ViewState": "AgIAAHoAAAAAAAAAAAAwwCkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T13:12:05.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T13:12:05.995Z"
             },
             {
               "$type": "Document",
@@ -96,8 +94,7 @@
               "RelativeToolTip": "Csharp2_ControlTower\\FlightLevelWindow.xaml.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAFoAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T06:45:22.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T06:45:22.103Z"
             },
             {
               "$type": "Document",
@@ -109,8 +106,7 @@
               "RelativeToolTip": "Csharp2_ControlTower\\Control\\ControlTower.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T06:51:20.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T06:51:20.815Z"
             },
             {
               "$type": "Document",
